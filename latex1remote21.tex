@@ -1,0 +1,124 @@
+\begin{comment}
+Układanka --- uporządkuj (przekopiuj) fragmenty tekstu (ograniczone pozomymi kreskami) aby w Overleaf został wygenerowany dokument bez błędów. Fragmenty są ponumerowane, dla ułatwienia orientacji.
+Po wygenerowaniu dokumentu rozwiąż pytania oznaczone liczbami w nawiasach zwykłych. Zadbaj, żeby nie było błędów w dokumencie. ,,Rozwiązany'' plik prześlij jako odpowiedź na zadanie w Moodle.
+\end{comment}
+
+1________________________________________________________________________
+
+\begin{abstract}% (9) sprawdz efekt przeniesienia otoczenia "abstract" do %otoczenia "titlepage"
+Here we studied the leaf transcriptome in seedlings of maize, an important C4 crop only distantly related to \textit{A. thaliana}. Using \uppercase{dna} microarrays comprising ca. 43,000 maize-specific probes we found that \textit{ca}. 12\% of all genes showed clear-cut diel rhythms of expression. Co-expressed genes belonging to individual clusters are likely to be regulated by common mechanisms.\\
+% tekst akapitu jest w jednym wierszu. To jak wygląda wynika z zawijania %tekstu w programie.
+% (13) Dopisz zdanie z odnosnikami do dowolnych stron, na dwa sposoby %omawiane w prezentacji.
+\end{abstract}
+
+\begin{comment}
+To jest komentarz wielowierszowy. Dokument ma pokazac ogolna skladnie dokumentu klasy article. Stosowany jest tu najprostszy sposob cytowania. W tekscie uzyte tez sa rozne polecenia.
+\end{comment}
+
+2________________________________________________________________________
+
+\begin{thebibliography}{7}%Editor  otoczenie wstawiajace literature
+\bibitem{cimmyt17} \textsc{International Maize and Wheat Improvement Center.} Maize growth stages \url{http://maizedoctor.org/maize-growth-stages}. Access: 23.12.2002.
+\bibitem{pnueli94} \textsc{Pnueli L, Hareven D, Rounsley SD, Yanofsky MF, Lifschitz E} (1994) Isolation of the tomato AGAMOUS gene TAG1 and analysis of its homeotic role in transgenic plants. Plant Cell 6: 163–173.
+
+\bibitem{rakoczy07} \textsc{Rakoczy-Trojanowska M.} Wprowadzanie genów do roślin. W: Malepszy S [red.] Biotechnologia Roślin. PWN Warszawa 2007: 233-246.
+\end{thebibliography}
+\begin{comment}
+(4) pozmieniaj formatowanie wpisow, uzywajac komend uzywanych wczesniej w dokumencie. (20) dodaj pozycje literatury (wymyslona)
+\end{comment}
+
+3________________________________________________________________________
+
+\documentclass[10pt,twocolumn]{article}% Tekst po znaku procenta to %komentarz. (5) Sprawdz, jak bedzie wygladal dokument bez opcji %"twocolumn". (12) Sproboj tez pozmieniac inne opcje pokazywane w %prezentacji. (3) Sproboj zamienic klase dokumentu na "book" i "report". %Co sie zmienilo?
+
+\usepackage[utf8]{inputenc}% ustawia kodowanie znakow
+\usepackage[english]{babel}% ustawia jezyk dokumentu, pakiet "babel", (11) %Sprobuj zmienic jezyk na polski (polish), jakie sa roznice
+\usepackage{siunitx}% do wpisywania jednostek miar
+
+\usepackage{comment}% do komentarzy o wielu wierszach, (18) sprawdz efekt %usuniecia tego wpisu
+\usepackage{hyperref}% do odnosnikow
+%\setcounter{secnumdepth}{1}% (6) odkomentuj i sprawdz efekt dzialania %tego parametru a takze zmiany liczby
+\usepackage{lipsum}% do czego sluzy ten pakiet? (17) W tekscie wstaw %polecenie \lipsum[N] , gdzie N to liczba z zakresu 1-7. Wyproboj tez %polecenie bez opcji, tj. \lipsum
+
+4________________________________________________________________________
+
+\begin{comment}
+Latex ma zdefiniowane wiele symboli (uzycie moze wymagac zaladowania odpowiedniego pakietu),  lista znajduje sie tu: https://rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf
+Mozna tez uzyc serwisu Detexify
+http://detexify.kirelabs.org/classify.html
+\end{comment}
+
+\subsection{Evaluation of physiological response of seedlings to severe cold}
+Physiological measurements were carried out on plants % w tym zdaniu %cytowana jest praca
+grown as above \cite{pnueli94}. Maximum quantum efficiency of PSII
+primary photochemistry (Fv/Fm) and PSII effective
+quantum yield ($\Phi$PSII) \ldots{} was about 3500 \si{\micro\mole} quanta \si{m^{-2}\ s^{-1}} \ldots{}
+% znaki dolara wyznaczają tryb matematyczny. Tu ułatwia to wstawienie %litery greckiej. Odpowiednie polecenia to nazwa litery, mała \phi, wielka %\Phi. (19) Zamień \Phi na inną literę grecką
+
+Water ($\Psi$w) and osmotic ($\Psi\pi$) potential were measured with leaf psychrometer L-51A. A single 10-mm leaf disc was used for each
+measurement. Osmotic potential was determined from the N\textsubscript{2}.%indeks dolny, (7) jak wpiszesz indeks górny?
+
+5________________________________________________________________________
+
+\section{Introduction}
+Recent years have seen a rapid accumulation of studies addressing the problem of circadian regulation of gene expression in plants other than \textbf{\textit{A. thaliana}} and also first attempts at comparative analyses. This could be emphasized {\itshape also like this using a switch, {\bfseries but this do not support interleaving}}. {\itshape However it can be done \bfseries like this in the same braces}. \itshape Switches without curly braces have an effect on all text up to next switch---check the 1\textsuperscript{st} phrase of ''Materials and methods'' \ldots{}
+\begin{comment}
+Pokazane jest zagniezdzanie polecen, switche (np. \textbf i \itshape) nie pozwalaja na zagniezdzanie. (0) Wyproboj polecenie \underline{} i \uppercase{}, co one robia?
+\end{comment}
+
+\section{Materials and methods}
+\subsection{Growth conditions}
+
+After this text the font is switched back \normalfont to normal font.
+Maize (\textit{Zea mays} spp. \textit{indentata}) inbred line CM109 was
+used in experiments. Kernels were germinated in wet sand in darkness at \SI{25}\degreeCelsius{} and seedlings were transferred to pots containing Knop’s solution supplemented with Hoagland’s
+micronutrient solution. Seedlings were grown in a climate chamber (14  h light/10  h darkness, temperature:
+\SI{14}\degreeCelsius/\SI{22}\degreeCelsius, light irradiance: 250 \si{\micro\mole} quanta \si{m^{-2}\s^{-1}}.
+% komendy w ostatnim zdaniu wstawiaja jednostki z ukladu SI, pakiet siunitx
+% (23) jak inaczej mozesz wpisac jednostki?
+
+6________________________________________________________________________
+
+\end{document}
+% Sprawdź efekt niedomkniecia nawiasu } w wybranej komendzie,
+% Sprawdz efekt literowki w nazwie komendy
+% Sprawdz efekt niezamnkiecia otoczenia, np. usun (lub zakomentuj symbolem %) \end{enumerate}
+
+7________________________________________________________________________
+
+\title{Rhythmic Diel Pattern of Gene Expression in Juvenile Maize Leaf. An example in \LaTeX{} a macro collection for \TeX{}}
+\author{P. Autor, E. Author, I. Autore}
+\begin{comment}
+przejście do nowego wiersza (komenda \\, mozna uzyc \newline - (8) sproboj) pozwala wpisać wszystkich autorów jesli jest ich wielu i nie mieszczą sie w jednym wierszu
+\end{comment}
+
+\date{\today}% data dzisiejsza, (15) zmień na inną dowolną, brak argumentu %kasuje to pole
+\begin{document}
+
+8________________________________________________________________________
+
+\subsection{Meta‐analysis of transcriptomic data on maize responses to different stresses}
+% (2) utworz wiecej poziomow hierarchii sekcji, zastosuj \subsubsection{} %i \paragraph{}
+
+We chose projects on maize responses to stress
+meeting the following criteria:
+
+\begin{enumerate}% otoczenie tworzace wyliczenie z numerowanymi pozycjami  %((10) sproboj zmienic "enumerate" na "itemize"). (14) Dodaj kolejny wpis.
+    \item Plants were at similar developmental stages.
+\item Seedlings were subjected to treatment of similar duration in different projects investigating a given stress type.
+\item Raw data (before normalization) was available.
+\item Experiments using inbred lines with known increased
+stress-tolerance were excluded.
+\end{enumerate}
+
+In all, data from ten projects \cite{cimmyt17} were analyzed, concerning
+response to severe cold, moderately low temperature, and
+fungal infection (Table S2, Online Resource 2) \cite{rakoczy07}.
+
+9________________________________________________________________________
+
+\begin{titlepage}% (1) sprawdz efekt usuniecia tego otoczenia (z %pozostawieniem komendy "\maketitle")
+\maketitle
+%\tableofcontents % (16) Jakby to byla przegladowka, spis tresci bylby %przydatny. Odkomentuj i sprawdz.
+\thispagestyle{empty}% usuniecie numeracji strony
+\end{titlepage}
